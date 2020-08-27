@@ -21,7 +21,7 @@ class App {
   }
 
   private database (): void {
-    mongoose.connect('mongodb+srv://DiegoFR:Freire15.@cluster0-wlpz2.mongodb.net/rpgproject', {
+    mongoose.connect('mongodb://localhost:27017/rpgproject', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
