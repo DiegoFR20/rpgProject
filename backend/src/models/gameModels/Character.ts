@@ -27,6 +27,7 @@ interface NpcInterface extends Document {
   edges: {},
   items?: {},
   powers?: {}
+  enemy?: boolean
 }
 
 const NpcSchema = new Schema({
@@ -55,7 +56,8 @@ const NpcSchema = new Schema({
   hindrances: { String },
   edges: { String },
   items: { String },
-  powers: { String }
+  powers: { String },
+  enemy: Boolean
 }, {
   timestamps: true
 })

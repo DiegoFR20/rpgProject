@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import Npc from '../models/Npc'
+import Npc from '../models/gameModels/Character'
 
 class UserController {
   public async index (req: Request, res: Response): Promise<Response> {

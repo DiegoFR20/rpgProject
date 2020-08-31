@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import Game from '../models/Game'
+import Game from '../models/gameModels/Game'
 
 class GameController {
   public async index (req: Request, res: Response): Promise<Response> {
