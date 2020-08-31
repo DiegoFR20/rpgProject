@@ -1,10 +1,16 @@
 import { Router } from 'express'
 
+import authMiddleware from './middleware/auth'
 import NpcController from './controller/NpcController'
 import GameController from './controller/GameController'
 import UserController from './controller/UserController'
+import SessionController from './controller/SessionController'
 
 const routes = Router()
+
+routes.post('/session', SessionController.store)
+
+routes.use(authMiddleware)
 
 routes.get('/npc', NpcController.index)
 routes.post('/npc', NpcController.store)

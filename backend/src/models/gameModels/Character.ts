@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { Schema, model, Document } from 'mongoose'
 
 interface NpcInterface extends Document {
@@ -27,7 +28,6 @@ interface NpcInterface extends Document {
   edges: {},
   items?: {},
   powers?: {}
-  enemy?: boolean
 }
 
 const NpcSchema = new Schema({
@@ -56,8 +56,7 @@ const NpcSchema = new Schema({
   hindrances: { String },
   edges: { String },
   items: { String },
-  powers: { String },
-  enemy: Boolean
+  powers: { String }
 }, {
   timestamps: true
 })

@@ -1,13 +1,14 @@
+// eslint-disable-next-line no-unused-vars
 import { Schema, model, Document } from 'mongoose'
 
 interface LocationsInterface extends Document {
     name: string,
     brief: string,
     story: string,
-    parts: string,
-    characters: {},
-    items: {},
-    npc: {}
+    parts?: string,
+    characters?: {},
+    items?: {},
+    npc?: {}
 }
 
 const LocationsSchema = new Schema({

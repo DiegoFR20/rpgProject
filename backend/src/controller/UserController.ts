@@ -1,19 +1,20 @@
+// eslint-disable-next-line no-unused-vars
 import { Request, Response } from 'express'
 
-import Npc from '../models/gameModels/Character'
+import User from '../models/Users'
 
 class UserController {
   public async index (req: Request, res: Response): Promise<Response> {
-    const npcs = await Npc.find()
+    const users = await User.find()
 
-    return res.json(npcs)
+    return res.json(users)
   }
 
   public async store (req: Request, res: Response): Promise<Response> {
     try {
-      const npc = await Npc.create(req.body)
+      const user = await User.create(req.body)
 
-      return res.json(npc)
+      return res.json(user)
     } catch (err) {
       res.json({ message: 'Valores inválidos' })
     }

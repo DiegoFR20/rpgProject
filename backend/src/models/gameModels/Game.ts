@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { Schema, model, Document } from 'mongoose'
 
 interface GameInterface extends Document {
@@ -8,7 +9,6 @@ interface GameInterface extends Document {
   npcs?: [string],
   sessions?: {},
   enemies?: [string],
-  items?: [string],
   locations?: [string],
   missions?: {}
 }
@@ -21,7 +21,6 @@ const GameSchema = new Schema({
   npcs: [String],
   sessions: { String },
   enemies: [String],
-  items: [String],
   locations: [String],
   missions: { String }
 }, {
