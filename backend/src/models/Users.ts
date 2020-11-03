@@ -4,11 +4,11 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 
 interface UserInterface extends Document {
-    fullName: string,
-    email: string,
-    password: string,
-    checkPassword?(password: string): string,
-    generateToken?(): string
+  fullName: string,
+  email: string,
+  password: string,
+  checkPassword?(password: string): string,
+  generateToken?(): string
 }
 
 const UserSchema = new Schema({
